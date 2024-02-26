@@ -6,6 +6,13 @@ app.get('/', (req, res) => {
 	res.send("Server is running on Port 4000");
 	res.send("Welcome")
 });
+
+
+app.get('/api/call', (req, res) => {
+	res.send("Working under Express Server");
+});
+
+
 const mongoURI = "mongodb+srv://ijaas:ijaas@cluster0.httu3xq.mongodb.net/"
 mongoose.connect(mongoURI)
 .then(() => {
