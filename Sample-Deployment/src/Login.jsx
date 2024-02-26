@@ -30,7 +30,9 @@ const Login = () => {
 		}).then(res => {
 			return res.json();
 		}).then(data => {
-			Navigate('Home')
+			if(data.Success) {
+				Navigate('Home')
+			}
 			console.log(data);
 		})
 	}

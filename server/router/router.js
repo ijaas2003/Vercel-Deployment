@@ -26,11 +26,11 @@ Router.post('/login', async (req, res) => {
 			return res.status(200).json({ Success: "Successfully login" })
 		}
 		else{
-			return res.status(424).json({ NotValid: "Password Wrong" })
+			return res.status(424).json({ Error: "Password Wrong" })
 		}
 	}
 	else{
-		return res.status(424).json({ NotValid: "Not Having Account" })
+		return res.status(424).json({ Error: "Not Having Account" })
 	}
 })
 
