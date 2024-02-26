@@ -1,5 +1,7 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 const Login = () => {
+	const Navigate = useNavigate();
 	const [UserName, setUserName] = useState('')
 	const [Password, setPassword] = useState('')
 	const [SignInUserName, setSignInUserName] = useState('')
@@ -28,6 +30,7 @@ const Login = () => {
 		}).then(res => {
 			return res.json();
 		}).then(data => {
+			Navigate('Home')
 			console.log(data);
 		})
 	}
