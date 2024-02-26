@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 
 app.get('/', (req, res) => {
 	res.send("Server is running on Port 4000");
+	res.send("Welcome")
 });
 const mongoURI = "mongodb+srv://ijaas:ijaas@cluster0.httu3xq.mongodb.net/"
 mongoose.connect(mongoURI)
