@@ -8,7 +8,7 @@ const Login = () => {
 	const [SignInPassword, setSignInPassword] = useState('')
 	console.log({ UserName, Password })
 	const HandleSub = () => {
-		fetch('http://localhost:4000/signIn', {
+		fetch('https://vercel-deployment-server-mu.vercel.app/signIn', {
 			method: "POST",
 			headers:{
 				"Content-Type":"application/json"
@@ -21,7 +21,7 @@ const Login = () => {
 		})
 	}
 	const HandleSubCheck = () => {
-		fetch('http://localhost:4000/login', {
+		fetch('https://vercel-deployment-server-mu.vercel.app/login', {
 			method: "POST",
 			headers:{
 				"Content-Type":"application/json"
